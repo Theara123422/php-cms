@@ -33,7 +33,7 @@
                                                             <img width="80px" height="80px" src="./assets/image/'.$row['thumbnail'].'" alt="">
                                                         </td>
                                                         <td width="150px">
-                                                            <a href=""class="btn btn-primary">Update</a>
+                                                            <a href="update_logo.php?id='.$row['id'].'"class="btn btn-primary">Update</a>
                                                             <button type="button" remove-id="1" class="btn btn-danger btn-remove" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                                                 Remove
                                                             </button>
