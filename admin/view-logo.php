@@ -30,11 +30,11 @@
                                                         <td>'.$row['id'].'</td>
                                                         <td>'.$row['status'].'</td>
                                                         <td>
-                                                            <img width="80px" height="80px" src="./assets/image/'.$row['thumbnail'].'" alt="">
+                                                            <img width="100px" height="100px" src="./assets/image/'.$row['thumbnail'].'" alt="">
                                                         </td>
                                                         <td width="150px">
                                                             <a href="update_logo.php?id='.$row['id'].'"class="btn btn-primary">Update</a>
-                                                            <button type="button" remove-id="1" class="btn btn-danger btn-remove" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                            <button type="button" remove-id="'.$row['id'].'" class="btn btn-danger btn-remove" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                                                 Remove
                                                             </button>
                                                         </td>
@@ -57,12 +57,13 @@
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-body">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Are you sure to remove this post?</h5>
+                                                    <h5 class="modal-title" id="exampleModalLabel">Are you sure to remove this Logo?</h5>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <form action="" method="post">
-                                                        <input type="hidden" class="value_remove" name="remove_id">
-                                                        <button type="submit" class="btn btn-danger">Yes</button>
+                                                        <input type="text" class="value_remove" name="remove_id">
+                                                        <!-- id -->
+                                                        <button type="submit" class="btn btn-danger" name="btn_confirm_remove_logo">Yes</button>
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>  
                                                     </form>
                                                 </div>

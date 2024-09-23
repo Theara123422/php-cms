@@ -1,5 +1,5 @@
 <?php 
-    include('sidebar.php');
+    include 'sidebar.php';
 ?>
                 <div class="col-10">
                     <div class="content-right">

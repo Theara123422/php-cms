@@ -111,4 +111,32 @@ function add_news_logo(){
     }
 }
 add_news_logo();
+function remove_logo(){
+    global $connection;
+
+    if(isset($_POST['btn_confirm_remove_logo'])){
+        $remove_logo_id = $_POST['remove_id'];
+
+        $sql_delete_logo = "DELETE FROM logo WHERE id = '$remove_logo_id'";
+
+        $result = $connection -> query($sql_delete_logo);
+
+        if($result){
+            echo '
+                    <script>
+                        $(document).ready(function(){
+                            swal({
+                                title: "Success Removing Logo",
+                                text: "You Removed Logo",
+                                icon: "success",
+                                button: "Confirm",
+                            });
+                        })
+                    </script>
+                ';
+        }
+    }
+
+}
+remove_logo();
 

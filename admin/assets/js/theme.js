@@ -7,6 +7,7 @@ jQuery('document').ready(function(){
 
     $('.btn-remove').click(function(){
         var data = $(this).attr('remove-id');
+        // var data = $row['id']
         $('.value_remove').val(data);
     });
 
