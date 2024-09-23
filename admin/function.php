@@ -140,3 +140,39 @@ function remove_logo(){
 }
 remove_logo();
 
+function edit_logo(){
+    global $connection;
+    if(isset($_POST['btn_confirm_edit_logo'])){
+        $updated_id = $_GET['id'];
+        $updated_status = $_POST['updated_status'];
+        $updated_image  = $_FILES['updated_image']['name'];
+
+        if($updated_image == null){
+            $thumbnail = $_POST['old_image'];
+        }
+        else{
+            $thumbnail = move_file('updated_image');
+        }
+
+        if(!empty($updated_status) && !empty($thumbnail)){
+            $sql_update_logo = "UPDATE logo SET status = '$updated_status' , thumbnail = '$thumbnail' WHERE id='$updated_id'";
+            $result = $connection -> query($sql_update_logo);
+            if($result){
+                echo '
+                    <script>
+                        $(document).ready(function(){
+                            swal({
+                                title: "Success Edit Logo",
+                                text: "You Edited Logo",
+                                icon: "success",
+                                button: "Confirm",
+                            });
+                        })
+                    </script>
+                ';
+            }
+        }
+    }
+}
+edit_logo();
+

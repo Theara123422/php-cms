@@ -28,7 +28,7 @@
                                         <input type="hidden" name="old_image" value="<?php echo $row['thumbnail'] ?>">
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-success">Confirm</button>
+                                        <button name="btn_confirm_edit_logo" type="submit" class="btn btn-success">Confirm</button>
                                         <button type="submit" class="btn btn-danger">Cancel</button>
                                     </div>
                                 </form>
