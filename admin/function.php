@@ -176,3 +176,36 @@ function edit_logo(){
 }
 edit_logo();
 
+function add_news(){
+    global $connection;
+    if(isset($_POST['btn_confirm_add_news'])){
+        $title     = $_POST['title'];
+        $news_type = $_POST['type'];
+        $category  = $_POST['category'];
+        $banner    = move_file('banner');
+        $thumbnail = move_file('thumbnail');
+        $description = $_POST['description'];
+
+        if(!empty($title) && !empty($news_type) && !empty($category) && !empty($banner) && !empty($thumbnail) && !empty($description)){
+            $sql_add_news = "INSERT INTO tb_new (title,new_type,category,banner,thumbnail,description) VALUES('$title','$news_type','$category','$banner','$thumbnail','$description')";
+            $result       = $connection -> query($sql_add_news);
+
+            if($result){
+                echo '
+                    <script>
+                        $(document).ready(function(){
+                            swal({
+                                title: "Success Add News",
+                                text: "You Added News",
+                                icon: "success",
+                                button: "Confirm",
+                            });
+                        })
+                    </script>
+                ';
+            }
+        }
+    }
+}
+add_news();
+
