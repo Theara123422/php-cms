@@ -185,9 +185,10 @@ function add_news(){
         $banner    = move_file('banner');
         $thumbnail = move_file('thumbnail');
         $description = $_POST['description'];
+        $author_id = $_SESSION['id'];
 
         if(!empty($title) && !empty($news_type) && !empty($category) && !empty($banner) && !empty($thumbnail) && !empty($description)){
-            $sql_add_news = "INSERT INTO tb_new (title,new_type,category,banner,thumbnail,description) VALUES('$title','$news_type','$category','$banner','$thumbnail','$description')";
+            $sql_add_news = "INSERT INTO tb_new (title,new_type,category,banner,thumbnail,description,author_id) VALUES('$title','$news_type','$category','$banner','$thumbnail','$description','$author_id')";
             $result       = $connection -> query($sql_add_news);
 
             if($result){

@@ -17,27 +17,40 @@
                                     <table class="table align-middle" border="1px">
                                         <tr>
                                             <th>Title</th>
+                                            <th>Author ID</th>
                                             <th>News Type</th>
                                             <th>Category</th>
                                             <th>Banner</th>
                                             <th>Thumbnail</th>
+                                            <th>Description</th>
                                             <th>Publish Date</th>
                                             <th>Actions</th>
                                         </tr>
-                                        <tr>
-                                            <td>Why do we use it?</td>
-                                            <td>National</td>
-                                            <td>Sports</td>
-                                            <td><img src="https://via.placeholder.com/80"/></td>
-                                            <td><img src="https://via.placeholder.com/80"/></td>
-                                            <td>27/June/2022</td>
-                                            <td width="150px">
-                                                <a href=""class="btn btn-primary">Update</a>
-                                                <button type="button" remove-id="1" class="btn btn-danger btn-remove" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    Remove
-                                                </button>
-                                            </td>
-                                        </tr>
+                                        <?php
+                                            $sql_get_news = "SELECT * FROM tb_new WHERE 1";
+                                            $result       = $connection -> query($sql_get_news);   
+                                            while($row = mysqli_fetch_assoc($result)){
+                                                echo '
+                                                    <tr>
+                                                        <td>'.$row['title'].'</td>
+                                                        <td>'.$row['author_id'].'</td>
+                                                        <td>'.$row['new_type'].'</td>
+                                                        <td>'.$row['category'].'</td>
+                                                        <td><img width="80px" height="80px" src="./assets/image/'.$row['banner'].'"/></td>
+                                                        <td><img width="80px" height="80px" src="./assets/image/'.$row['thumbnail'].'"/></td>
+                                                        <td>'.$row['description'].'</td>
+                                                        <td>'.$row['created_at'].'</td>
+                                                        <td width="150px">
+                                                            <a href=""class="btn btn-primary">Update</a>
+                                                            <button type="button" remove-id="1" class="btn btn-danger btn-remove" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                                Remove
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                ';
+                                            }
+
+                                        ?>
                                     </table>
                                     <ul class="pagination">
                                         <li>
