@@ -210,3 +210,31 @@ function add_news(){
 }
 add_news();
 
+function edit_news(){
+    global $connection;
+    if(isset($_POST['btn_confirm_edit_news'])){
+        $updated_id = $_GET['id'];
+        $title     = $_POST['updated_title'];
+        $news_type = $_POST['updated_type'];
+        $category  = $_POST['updated_category'];
+        $description = $_POST['updated_description'];
+        $banner    = $_FILES['updated_banner']['name'];
+        $thumbnail = $_FILES['updated_thumbnail']['name'];
+
+        if($banner == null){
+            $uploaded_banner = $_POST['old_banner'];
+        }
+        else{
+            $uploaded_banner = move_file('updated_banner');
+        }
+        if($thumbnail == null) {
+            $uploaded_thumbnail = $_POST['old_thumbnail'];
+        }
+        else{
+            $uploaded_thumbnail = move_file('updated_thumbnail');
+        }
+
+    }
+}
+edit_news();
+

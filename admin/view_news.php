@@ -9,11 +9,6 @@
                         <div class="bottom view-post">
                             <figure>
                                 <form method="post" enctype="multipart/form-data">
-                                    <!-- <div class="block-search">
-                                        <input type="text" class="form-control" placeholder="SEARCH HERE">
-                                        <button type="submit">
-                                        <img src="search.png" alt=""></button>
-                                    </div> -->
                                     <table class="table align-middle" border="1px">
                                         <tr>
                                             <th>Title</th>
@@ -41,7 +36,7 @@
                                                         <td>'.$row['description'].'</td>
                                                         <td>'.$row['created_at'].'</td>
                                                         <td width="150px">
-                                                            <a href=""class="btn btn-primary">Update</a>
+                                                            <a href="edit_news.php?id='.$row['id'].'" class="btn btn-primary">Update</a>
                                                             <button type="button" remove-id="1" class="btn btn-danger btn-remove" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                                                 Remove
                                                             </button>
