@@ -32,7 +32,7 @@
         <div class="container">
             <div class="logo">
                 <a href="index.php">
-                    <img width=" 80px" src="../admin/assets/image/<?php echo logo_website("Header")?>" alt="">
+                    <img width=" 80px" src="" alt="">
                 </a>
             </div>
             <ul class="menu">

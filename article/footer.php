@@ -2,7 +2,7 @@
         <div class="container">
             <div class="logo">
                 <a href="">
-                <img width=" 80px" src="../admin/assets/image/<?php echo logo_website("Footer")?>" alt="">
+                <img width=" 80px" src="" alt="">
                 </a>
             </div>
             <div class="about">
@@ -12,7 +12,7 @@
             </div>
             <div class="connect">
                 <ul>
-                  <?php echo footer('Footer')?>
+                  
                 
                 </ul>
             </div>

@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include 'header.php'; ?>
 <main class="home">
     <section class="trending">
         <div class="container">
@@ -28,10 +28,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-8 content-left">
-                    <?php top_trending_nesw();?>
+                    <?php ?>
                 </div>
                 <div class="col-4 content-right">
-                    <?php get_trend_news();?>
+                    <?php ?>
                   </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
     <section class="news">
         <div class="container">
             <div class="row">
-                <?php get_news_post('sport'); ?>
+                <?php  ?>
             </div>
         </div>
     </section>
@@ -77,7 +77,7 @@
     <section class="news">
         <div class="container">
             <div class="row">
-                <?php get_news_post('social') ?>
+                <?php  ?>
             </div>
         </div>
     </section>
@@ -98,7 +98,7 @@
     <section class="news">
         <div class="container">
             <div class="row">
-                <?php get_news_post('entertainment') ?>
+                <?php ?>
             </div>
         </div>
     </section>

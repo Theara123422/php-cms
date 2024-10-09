@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row">
                 <?php 
-                 search_news();
+                
                 ?>
             </div>
         </div>

@@ -20,7 +20,7 @@
                         <div class="wrap-follow">
                             <h4 class="title">FOLLOW US</h4>
                             <ul>
-                               <?php echo get_follow_website('Header') ?>
+                              
                             </ul>
                         </div>
                     </div>

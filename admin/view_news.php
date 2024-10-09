@@ -37,7 +37,7 @@
                                                         <td>'.$row['created_at'].'</td>
                                                         <td width="150px">
                                                             <a href="edit_news.php?id='.$row['id'].'" class="btn btn-primary">Update</a>
-                                                            <button type="button" remove-id="1" class="btn btn-danger btn-remove" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                            <button type="button" remove-id="'.$row['id'].'" class="btn btn-danger btn-remove" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                                                 Remove
                                                             </button>
                                                         </td>
@@ -65,8 +65,9 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <form action="" method="post">
-                                                        <input type="hidden" class="value_remove" name="remove_id">
-                                                        <button type="submit" class="btn btn-danger">Yes</button>
+                                                        <input type="text" class="value_remove" name="remove_id">
+                                                        <!-- value_remove = id -->
+                                                        <button type="submit" class="btn btn-danger" name="btn_confirm_delete_news">Yes</button>
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>  
                                                     </form>
                                                 </div>

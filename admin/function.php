@@ -234,7 +234,48 @@ function edit_news(){
             $uploaded_thumbnail = move_file('updated_thumbnail');
         }
 
+        if(!empty($title) && !empty($news_type) && !empty($category) && !empty($description)){
+            $sql_edit_news = "UPDATE tb_new SET `title` = '$title' , `new_type` = '$news_type' , `category` = '$category' , `banner` = '$uploaded_banner' , `thumbnail` = '$uploaded_thumbnail',`description` = '$description' WHERE `id` = '$updated_id'";
+            $result = $connection -> query($sql_edit_news);
+            if($result){
+                echo '
+                    <script>
+                        $(document).ready(function(){
+                            swal({
+                                title: "Success Edit News",
+                                text: "You Edited News",
+                                icon: "success",
+                                button: "Confirm",
+                            });
+                        })
+                    </script>
+                ';
+            }
+        }
     }
 }
 edit_news();
+function remove_news(){
+    global $connection;
+    if(isset($_POST['btn_confirm_delete_news'])){
+        $remove_id = $_POST['remove_id'];
+        $sql_delete_new = "DELETE FROM tb_new WHERE `id` = '$remove_id'";
+        $result = $connection -> query($sql_delete_new);
+        if($result){
+            echo '
+                <script>
+                    $(document).ready(function(){
+                        swal({
+                            title: "Success Add News",
+                            text: "You Added News",
+                            icon: "success",
+                            button: "Confirm",
+                        });
+                    })
+                </script>
+            ';
+        }
+    }
+}
+remove_news();
 

@@ -1,14 +1,7 @@
 <?php 
 
-    include('header.php'); 
-    $current_news_id = $_GET['id'];
-
-    $query= "SELECT * FROM `news` WHERE `id` = '$current_news_id'";
-
-    $result = $connection -> query($query);
-
-    $row = mysqli_fetch_assoc($result);
-    $id=$row['id'];
+    include 'header.php'; 
+    
 ?>
 <main class="news-detail">
     <section>
@@ -17,13 +10,13 @@
                 <div class="col-8">
                     <div class="main-news">
                         <div class="thumbnail">
-                            <img src="../admin/assets/image/<?php echo $row['banner']  ?>">
+                            <img src="">
                         </div>
                         <div class="detail">
-                            <h3 class="title"><?php echo $row['title'] ?></h3>
-                            <div class="date"><?php echo $row['create_at'] ?></div>
+                            <h3 class="title"></h3>
+                            <div class="date"></div>
                             <div class="description">
-                                <?php echo $row['description'] ?>
+                               
                             </div>
                         </div>
                     </div>
@@ -31,14 +24,14 @@
                 <div class="col-4">
                     <div class="relate-news">
                         <h3 class="main-title">Related News</h3>
-                                <?php get_related_news($row['id'],$row['category'])?>
+                                
                     </div>
                 </div>
             </div>
         </div>
         <?php 
           
-          get_views($id);
+       
         
         ?>
     </section>
