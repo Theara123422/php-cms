@@ -20,7 +20,27 @@
                         <div class="wrap-follow">
                             <h4 class="title">FOLLOW US</h4>
                             <ul>
-                              
+                                <li>
+                                   <img src="assets/icon/fb.png" width="40px"> <a href="">Facebook</a>
+                                </li>
+                                <li>
+                                   <img src="assets/icon/yt.png" width="40px"> <a href="">Youtube</a>
+                                </li>
+                                <li>
+                                   <img src="assets/icon/ig.jfif" width="40px"> <a href="">Instagram</a>
+                                </li>
+                                <li>
+                                   <img src="assets/icon/telegram.png" width="40px"> <a href="">Telegram</a>
+                                </li>
+                                <li>
+                                   <img src="assets/icon/gmail-1.png" width="40px"> <a href="">Email</a>
+                                </li>
+                                <li>
+                                   <img src="assets/icon/tiktok.png" width="40px"> <a href="">Tok Tok</a>
+                                </li>
+                                <li>
+                                   <img src="assets/icon/phone.jpg" width="40px"> <a href="">012 333 444 / 010 232 323</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -31,23 +51,23 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="label">Username</div>
-                                        <input type="text" class="box" placeholder="Username" name="username" >
+                                        <input type="text" class="box" placeholder="Username" required>
                                     </div>
                                     <div class="col-6">
                                         <div class="label">Email</div>
-                                        <input type="email" class="box" placeholder="Email" name="email" >
+                                        <input type="email" class="box" placeholder="Email" required>
                                     </div>
                                     <div class="col-6">
                                         <div class="label">Telephone</div>
-                                        <input type="tel" class="box" placeholder="Telephone" name="phone"  minlength="9" maxlength="10">
+                                        <input type="tel" class="box" placeholder="Telephone" required minlength="9" maxlength="10">
                                     </div>
                                     <div class="col-6">
                                         <div class="label">Address</div>
-                                        <input type="text" class="box" placeholder="Address" name="address" >
+                                        <input type="text" class="box" placeholder="Address" required>
                                     </div>
                                     <div class="col-12">
                                         <div class="label">Message</div>
-                                        <textarea cols="30" rows="10" placeholder="Message Here" name="message" ></textarea>
+                                        <textarea cols="30" rows="10" placeholder="Message Here" required></textarea>
                                     </div>
                                     <div class="col-12">
                                         <div class="wrap-btn">

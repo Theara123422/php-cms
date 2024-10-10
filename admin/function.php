@@ -110,7 +110,7 @@ function add_news_logo(){
         }
     }
 }
-add_news_logo();
+add_news_logo();    
 function remove_logo(){
     global $connection;
 
@@ -250,6 +250,9 @@ function edit_news(){
                         })
                     </script>
                 ';
+            }
+            else{
+                echo 123;
             }
         }
     }

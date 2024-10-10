@@ -6,7 +6,7 @@
                 <div class="col-12">
                     <div class="content-trending">
                         <div class="content-left">
-                            RESULT SEARCH
+                            SPORT NEWS
                         </div>   
                     </div>
                 </div>
@@ -38,6 +38,22 @@
                         ';
                     }
                 ?>
+
+            </div>
+            <div class="row pagination">
+                <div class="col-12">
+                    <ul>
+                        <li>
+                            <a href="">1</a>
+                        </li>
+                        <li>
+                            <a href="">2</a>
+                        </li>
+                        <li>
+                            <a href="">3</a>
+                        </li>
+                    </ul>   
+                </div>
             </div>
         </div>
     </section>

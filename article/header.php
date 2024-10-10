@@ -1,5 +1,5 @@
-<?php include 'function.php'?>
 <!DOCTYPE html>
+<?php include('function.php'); ?>
 <html lang="en">
     <head>
         <title>CMS News</title>
@@ -9,22 +9,22 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <!-- //@style -->
+        <!-- @style -->
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/sport.css">
         <link rel="stylesheet" href="assets/css/news-detail.css">
         <link rel="stylesheet" href="assets/css/contact.css">
         <link rel="stylesheet" href="assets/css/search.css">
-        <!-- google font -->
+        <!-- @google font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Kantumruy&display=swap" rel="stylesheet">
-        <!-- google font -->
+        <!-- @google font -->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <!-- slick slider -->
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel1.8.1/slick/slick.css"/>
-        <!-- funcy box -->
+        <!-- @slick slider -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <!-- @funcy box -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
     </head>
 <body>
@@ -32,38 +32,38 @@
         <div class="container">
             <div class="logo">
                 <a href="index.php">
-                    <img width=" 80px" src="" alt="">
+                    <img width="120px" src="../admin/assets/image/<?php echo show_logo('header') ?>" alt="">
                 </a>
             </div>
             <ul class="menu">
                 <li><a href="index.php">HOME</a></li>
                 <li class="menu-sport"><a href="javascript:viod(0)">SPORT</a>
-                <ul class="sub-menu sport">
+                    <ul class="sub-menu sport">
                         <li>
-                            <a href="sport.php">National</a>
+                            <a href="sport-news-national.php">National</a>
                         </li>
                         <li>
-                            <a href="sport_international.php">International</a>
+                            <a href="">International</a>
                         </li>
                     </ul>
                 </li>
                 <li class="menu-sport"><a href="javascript:viod(0)">SOCIAL</a>
                     <ul class="sub-menu sport">
                         <li>
-                            <a href="social_national.php">National</a>
+                            <a href="">National</a>
                         </li>
                         <li>
-                            <a href="social_international.php">International</a>
+                            <a href="">International</a>
                         </li>
                     </ul>
                 </li>
                 <li class="menu-sport"><a href="javascript:viod(0)">ENTERTAINMENT</a>
                     <ul class="sub-menu sport">
                         <li>
-                            <a href="entertaiment_national.php">National</a>
+                            <a href="">National</a>
                         </li>
                         <li>
-                            <a href="entertaiment_international.php">International</a>
+                            <a href="">International</a>
                         </li>
                     </ul>
                 </li>
