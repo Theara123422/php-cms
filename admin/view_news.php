@@ -65,7 +65,7 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <form action="" method="post">
-                                                        <input type="text" class="value_remove" name="remove_id">
+                                                        <input type="hidden" class="value_remove" name="remove_id">
                                                         <!-- value_remove = id -->
                                                         <button type="submit" class="btn btn-danger" name="btn_confirm_delete_news">Yes</button>
                                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>  
