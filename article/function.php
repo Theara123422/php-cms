@@ -3,8 +3,7 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <?php 
-// @Connection database
-// $con = new mysqli('','root','','');
+    // @Connection database
     include '../admin/connection.php';
     function show_logo($location){
         global $connection;
@@ -31,6 +30,34 @@
                         </a>
                     </figure>
                 </div>
+            ';
+        }
+    }
+    function update_view($news_id){
+        global $connection;
+        $sql_update_view  = "UPDATE tb_new SET views = views + 1 WHERE `id` = '$news_id'";
+        $connection -> query($sql_update_view);
+    }
+    function get_related_news($news_id,$category){
+        global $connection;
+        $sql_get_related_news = "SELECT * FROM tb_new WHERE `id` NOT IN ('$news_id') AND `category` = '$category' LIMIT 2";
+        $result               = $connection -> query($sql_get_related_news);
+        while($row = mysqli_fetch_assoc($result)){
+            echo '
+                <figure>
+                    <a href="news-detail.php?id='.$row['id'].'">
+                        <div class="thumbnail">
+                            <img width="350px" height="200px" src="../admin/assets/image/'.$row['thumbnail'].'" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3 class="title">'.$row['title'].'</h3>
+                            <div class="date">'.$row['created_at'].'</div>
+                            <div class="description">
+                                '.$row['description'].'
+                            </div>
+                        </div>
+                    </a>
+                </figure>
             ';
         }
     }
